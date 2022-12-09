@@ -19,6 +19,9 @@ Fusion network에서는 앞서 추출한 두가지의 feature를 combine하여 �
 ## Emotic Dataset 
 다음의 EMOTIC dataset을 사용하였다.  
 *[EMOTIC dataset'](https://paperswithcode.com/dataset/emotic)*
+![image](https://user-images.githubusercontent.com/90603399/206726105-30f3b099-dea3-4f4f-9548-a507ba2efafd.png)
+
+
 <br></br>
 
 
