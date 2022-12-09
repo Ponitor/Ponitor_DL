@@ -1,70 +1,31 @@
 # Emotic 
 
-Humans use their facial features or expressions to convey how they feel, such as a person may smile when happy and scowl when angry. Historically, computer vision research has focussed on analyzing and learning these facial features to recognize emotions. 
-However, these facial features are not universal and vary extensively across cultures and situations. 
+PONITOR에서 보이스피싱 피해자를 탐지하는데 감정 인식은 중요한 기술이다. 
+하지만 코로나19로 인해 마스크 착용이 일상화된 지금, 표정만으로 감정을 탐지하는 것은 정확도가 낮았다.
+따라서 표정뿐만아니라 몸짓, 장면 맥락까지 고려한 emotion recognition 모델을 사용하게 되었다. 
 
 
-<img src="https://raw.githubusercontent.com/Tandon-A/emotic/master/assets/face.jpg">    <img src="https://raw.githubusercontent.com/Tandon-A/emotic/master/assets/full_scene.jpg" width="400">
-###### Fig 1: a) (Facial feature) The person looks angry or in pain b) (Whole scene) The person looks elated. 
+## Pipeline
 
-A scene context, as shown in the figure above, can provide additional information about the situations. This project explores the use of context in recognizing emotions in images. 
-
-## Pipeline 
-
-The project uses the EMOTIC dataset and follows the methodology as introduced in the paper *['Context based emotion recognition using EMOTIC dataset'](https://arxiv.org/pdf/2003.13401.pdf)*.
-
+다음의 논문에서 사용하는 CNN 모델을 사용하였다. 
+그 구조와 해당 논문은 다음과 같다. 
 ![Pipeline](https://raw.githubusercontent.com/Tandon-A/emotic/master/assets/pipeline%20model.jpg "Model Pipeline") 
 ###### Fig 2: Model Pipeline ([Image source](https://arxiv.org/pdf/2003.13401.pdf))
 
-Two feature extraction modules first extract features over an image. These features are then used by a third module to predict the continuous dimensions (valence, arousal and dominance) and the discrete emotion categories.
+첫번째 모듈에서는 YOLO를 이용하여 Body를 detect하고 여기서 body feature를 추출한다.
+두번째 모듈에서는 이미지 전체의 image(context) feature를 추출한다.
+Fusion network에서는 앞서 추출한 두가지의 feature를 combine하여 최종 결과값인 vad값과 카테고리를 예측한다.  
 
 ## Emotic Dataset 
-
-The Emotic dataset can be used only for **non-commercial research and education purposes**.
-Please, fill out the following form to request access to the dataset and the corresponding annotations.
-
-[Access Request for EMOTIC](https://forms.gle/wvhComeDHwQPD6TE6)
+다음의 EMOTIC dataset을 사용하였다.  
+r *['Context based emotion recognition using EMOTIC dataset'](https://arxiv.org/pdf/2003.13401.pdf)*.
 
 ## Usage
-Download the Emotic dataset & annotations, and prepare the directory following the below structure: 
-```
-├── ...
-│   ├── emotic
-│   |    ├── ade20k
-│   |    ├── emodb_small
-│   |    ├── framesdb
-│   |    ├── mscoco 
-│   ├── Annotations
-│   |    ├── Annotations.mat
-```
+위의 pre 파일에는 EMOTIC dataset을 다운로드받아 전처리한 데이터셋들이 npy형식으로 저장되어있어 
+별도로 데이터를 다운로드 받고 전처리할 필요가 없다. 
+또한 학습이 완료된 모델도 /model/models에 저장되어 있기 때문에 별도로 학습시키지 않아도 바로 test할 수 있다. 
 
-1. To convert annotations from mat object to csv files and preprocess the data: 
-
-```
-> python mat2py.py --data_dir proj/data/emotic19 --generate_npy
-```
-* data_dir: Path of the directory containing the emotic and annotations folder as described in the above data directory structure. 
-* generate_npy: Argument to specify to generate npy files (later used for training and testing) along with CSV files. If not passed only CSV files are generated. 
-
-2. To train the model: 
-
-```
-> python main.py --mode train --data_path proj/data/emotic_pre --experiment_path proj/debug_exp
-```
-* mode: Mode to run the main file.
-* data_path: Path of the directory which contains the preprocessed data and CSV files generated in the first step.  
-* experiment_path: Path of the experiment directory. The directory will save the results, models and logs. 
-
-3. To test the model: 
-
-```
-> python main.py --mode test --data_path proj/data/emotic_pre --experiment_path proj/debug_exp
-```
-* mode: Mode to run the main file.
-* data_path: Path of the directory which contains the preprocessed data and CSV files generated in the first step.  
-* experiment_path: Path of the experiment directory. Models stored in the the directory are used for testing. 
-
-4. To perform inference: 
+## To perform inference: 
 
 ```
 > python main.py --mode inference --inference_file proj/debug_exp/inference_file.txt --experiment_path proj/debug_exp
@@ -100,7 +61,7 @@ _Ronak Kosti, Jose Alvarez, Adria Recasens, Agata Lapedriza_ <br>
 }
 ```
 
-## Author 
-[Abhishek Tandon](https://github.com/Tandon-A)
+## Reference
+[Context Based Emotion Recognition using EMOTIC Dataset]([https://github.com/Tandon-A](https://paperswithcode.com/paper/context-based-emotion-recognition-using))
 
 
