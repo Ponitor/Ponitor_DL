@@ -39,7 +39,7 @@ video_file: 입력 비디오 파일의 경로
 
 ## Results 
 
-![Result GIF 1](https://github.com/Tandon-A/emotic/blob/master/assets/eld11_gif2.gif "Result GIF 1")
+![Result GIF 1](https://github.com/Ponitor/Ponitor_DL/blob/main/EmotionRecognition/assets/test_result.gif "Result GIF 1")
 
 ## Acknowledgements
 
