@@ -37,7 +37,10 @@ video_file: 입력 비디오 파일의 경로
 
 실행 결과 비디오는 
 \model\results 에서 result_vid.mp4 형식으로 확인할 수 있다. 
+
 <br></br>
+<br></br>
+
 이미지 파일을 inference하고 싶다면 다음의 코드를 실행시킨다. 
 ```python
 >  python yolo_inference.py --experiment_path C:\emotic-master\model  --inference_file C:\emotic-master\assets\friends.jpg
