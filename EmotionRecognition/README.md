@@ -51,7 +51,7 @@ Peacebite의 김세림, 강연수(본인) 팀원이 직접 촬영한 테스트 �
 ```python
 >  python yolo_inference.py --experiment_path proj/debug_exp --video_file C:\emotic-master\assets\video_file.mp4
 ```
-experiment_path : experiment directory의 경로명으로 학습된 모델이 저장되어 있음
+experiment_path : experiment directory의 경로명으로 학습된 모델이 저장되어 있음<br></br>
 video_file: 입력 비디오 파일의 경로  
 
 실행 결과 비디오는 
@@ -63,7 +63,7 @@ video_file: 입력 비디오 파일의 경로
 ```python
 >  python yolo_inference.py --experiment_path C:\emotic-master\model  --inference_file C:\emotic-master\assets\friends.jpg
 ```
-experiment_path : experiment directory의 경로명으로 학습된 모델이 저장되어 있음
+experiment_path : experiment directory의 경로명으로 학습된 모델이 저장되어 있음<br></br>
 inference_file: 입력 이미지 파일의 경로 정보가 적혀있는 txt파일의 경로 
 (assets/inference_file.txt 참고) 
 <br></br>
