@@ -3,6 +3,7 @@
 PONITOR에서 보이스피싱 피해자를 탐지하는데 감정 인식은 중요한 기술이다. 
 하지만 코로나19로 인해 마스크 착용이 일상화된 지금, 표정만으로 감정을 탐지하는 것은 정확도가 낮았다.
 따라서 표정뿐만아니라 몸짓, 장면 맥락까지 고려한 emotion recognition 모델을 사용하게 되었다. 
+<br></br>
 ![image](https://user-images.githubusercontent.com/90603399/206726985-3e302299-12dd-4b08-ace1-7b2e5e3a2414.png)
 
 <br></br>
