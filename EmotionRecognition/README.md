@@ -30,11 +30,13 @@ Fusion network에서는 앞서 추출한 두가지의 feature를 combine하여 �
 pre 파일에는 EMOTIC dataset을 다운로드받아 전처리한 데이터셋들이 npy형식으로 저장되어있어 
 별도로 데이터를 다운로드 받고 전처리할 필요가 없다. 
 또한 학습이 완료된 모델은 다음에서 다운로드 받을 수 있다.
+<br></br>
 *['Trained model and thresholds'](https://drive.google.com/drive/folders/1e-JLA7V73CQD5pjTFCSWnKCmB0gCpV1D)*
+<br></br>
 다운로드 받은 후 model 폴더 안에 저장해 놓고 yolo_inference.py에서 model을 불러오는 부분에서 경로명을 확인해주면 별도로 학습시키지 않아도 저장된 모델을 불러와 바로 test할 수 있다. 
 <br></br>
 
-##Test video
+## Test video
 Peacebite의 김세림, 강연수(본인) 팀원이 직접 촬영한 테스트 영상과 보이스피싱 피해자 이미지는 아래에서 다운로드 받을 수 있다. 
 *[Voice Phishing Test Inputs](https://drive.google.com/drive/folders/1s5REQo49n3526jeE71j-qjrYSyLm7Aj0?usp=sharing)*
 
