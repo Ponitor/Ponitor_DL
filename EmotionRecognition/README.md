@@ -1,8 +1,9 @@
-# Emotic 
+# Emotion Recognition for PONITOR
 
 PONITOR에서 보이스피싱 피해자를 탐지하는데 감정 인식은 중요한 기술이다. 
 하지만 코로나19로 인해 마스크 착용이 일상화된 지금, 표정만으로 감정을 탐지하는 것은 정확도가 낮았다.
 따라서 표정뿐만아니라 몸짓, 장면 맥락까지 고려한 emotion recognition 모델을 사용하게 되었다. 
+![image](https://user-images.githubusercontent.com/90603399/206726985-3e302299-12dd-4b08-ace1-7b2e5e3a2414.png)
 
 <br></br>
 ## Pipeline
@@ -33,7 +34,8 @@ pre 파일에는 EMOTIC dataset을 다운로드받아 전처리한 데이터셋�
 <br></br>
 *['Trained model and thresholds'](https://drive.google.com/drive/folders/1e-JLA7V73CQD5pjTFCSWnKCmB0gCpV1D)*
 <br></br>
-다운로드 받은 후 model 폴더 안에 저장해 놓고 yolo_inference.py에서 model을 불러오는 부분에서 경로명을 확인해주면 별도로 학습시키지 않아도 저장된 모델을 불러와 바로 test할 수 있다. 
+다운로드 받은 후 model 폴더 안에 저장해 놓고 yolo_inference.py를 실행시킬 때 
+experiment_path에서 경로를 입력하면 별도로 학습시키지 않아도 저장된 모델을 불러와 바로 test할 수 있다. 
 <br></br>
 
 ## Test video
