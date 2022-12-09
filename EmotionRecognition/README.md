@@ -38,7 +38,10 @@ pre 파일에는 EMOTIC dataset을 다운로드받아 전처리한 데이터셋�
 
 ## Test video
 Peacebite의 김세림, 강연수(본인) 팀원이 직접 촬영한 테스트 영상과 보이스피싱 피해자 이미지는 아래에서 다운로드 받을 수 있다. 
+<br></br>
 *[Voice Phishing Test Inputs](https://drive.google.com/drive/folders/1s5REQo49n3526jeE71j-qjrYSyLm7Aj0?usp=sharing)*
+
+<br></br>
 
 ## To perform inference: 
 1. 비디오 파일을 inference하는 코드이다. 
