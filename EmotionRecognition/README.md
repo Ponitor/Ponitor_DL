@@ -5,7 +5,8 @@ PONITOR에서 보이스피싱 피해자를 탐지하는데 감정 인식은 중�
 따라서 표정뿐만아니라 몸짓, 장면 맥락까지 고려한 emotion recognition 모델을 사용하게 되었다. 
 <br></br>
 ![image](https://user-images.githubusercontent.com/90603399/206726985-3e302299-12dd-4b08-ace1-7b2e5e3a2414.png)
-
+관련 기술블로그 참고 <br>
+*[두두의 벨로그_PONITOR](https://velog.io/@kang1221/Fonitor-대면편취형-보이스피싱-을-예방하기-위한-모니터링-서비스)*
 <br></br>
 ## Pipeline
 
