@@ -27,17 +27,15 @@ r *['Context based emotion recognition using EMOTIC dataset'](https://arxiv.org/
 
 ## To perform inference: 
 
+```python
+>  python yolo_inference.py --experiment_path proj/debug_exp --video_file C:\emotic-master\assets\video_file.mp4
 ```
-> python main.py --mode inference --inference_file proj/debug_exp/inference_file.txt --experiment_path proj/debug_exp
-```
-* mode: Mode to run the main file.
-* inference_file: Text file specifying images to perform inference. A row is: 'full_path_of_image x1 y1 x2 y2', where (x1,y1) and (x2,y2) specify the bounding box. Refer [sample_inference_list.txt](https://github.com/Tandon-A/emotic/blob/master/sample_inference_list.txt).
-* experiment_path: Path of the experiment directory. Models stored in the the directory are used for inference.     
-  
-  
-You can also train and test models on Emotic dataset by using the [Colab_train_emotic notebook](https://github.com/Tandon-A/emotic/blob/master/Colab_train_emotic.ipynb). [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Tandon-A/emotic/blob/master/Colab_train_emotic.ipynb)
+experiment_path : experiment directory의 경로명으로 학습된 모델이 저장되어 있음
+video_file: 입력 비디오 파일의 경로  
 
-The **trained models and thresholds** to use for inference purposes are availble [here](https://drive.google.com/drive/folders/1e-JLA7V73CQD5pjTFCSWnKCmB0gCpV1D?usp=sharing). 
+실행 결과 비디오는 
+\model\results 에서 result_vid.mp4 형식으로 확인할 수 있다. 
+
 
 ## Results 
 
